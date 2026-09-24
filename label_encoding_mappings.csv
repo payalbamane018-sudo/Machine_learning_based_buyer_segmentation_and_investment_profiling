@@ -1,0 +1,5 @@
+field,category,encoded_value
+client_type,Company,0
+client_type,Individual,1
+acquisition_purpose,Home,0
+acquisition_purpose,Investment,1
