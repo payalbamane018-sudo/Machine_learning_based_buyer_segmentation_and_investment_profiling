@@ -1,0 +1,18 @@
+Final model: K-Means, k=4
+Silhouette (K-Means): 0.1243
+Silhouette (Hierarchical): 0.0824
+ARI agreement K-Means vs Hierarchical: 0.2521
+PCA variance explained (2D): 38.46%
+
+Cluster name mapping:
+  Cluster 0 -> High-Net-Worth Investors
+  Cluster 1 -> Mainstream Buyers
+  Cluster 2 -> Premium / Global Investors
+  Cluster 3 -> First-Time Buyers
+
+                n_clients  avg_age  pct_investment_purpose  pct_corporate  pct_loan  avg_satisfaction  avg_property_count  avg_total_investment  avg_purchase_price  avg_floor_area  avg_purchase_span_days                segment_name
+cluster_kmeans                                                                                                                                                                                                                         
+0                      81    62.98                   25.93           4.94      36.0              3.52                6.43            2140245.34           335609.32         1113.05                  357.90    High-Net-Worth Investors
+1                     907    54.82                   31.31           4.96      37.0              2.96                3.61            1087333.59           301911.29         1001.80                  368.83           Mainstream Buyers
+2                     664    54.25                   29.97           4.82      36.0              3.08                3.53            1480485.36           421253.95         1379.04                  328.49  Premium / Global Investors
+3                     348    52.75                   31.90           6.32      39.0              2.99                3.34            1086601.27           326004.01         1093.35                    6.34           First-Time Buyers
