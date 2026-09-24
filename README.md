@@ -1,0 +1,2 @@
+# Machine_learning_based_buyer_segmentation_and_investment_profiling
+Buyer segmentation and invest profiling for real estate market intelligence
