@@ -102,9 +102,3 @@ python step5_optimal_cluster_selection.py
 python step5_two_segmentation_approaches.py
 python step6_cluster_interpretation.py
 ```
-
-Each script reads the output of the previous step and writes its own output CSV(s) to the working directory.
-
-## Author
-
-[Your name]
