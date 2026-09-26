@@ -1,5 +1,0 @@
-cluster,n_clients,pct_of_total,pct_investment_purpose,pct_home_purpose,top_country,top_country_pct,top_region,top_region_pct,loan_applied_rate,avg_age,pct_female,pct_male,pct_company,pct_individual,avg_satisfaction
-0,585,0.292,0.342,0.658,USA,0.744,California,0.282,0.397,40.6,0.491,0.509,0.079,0.921,4.02
-1,420,0.21,0.274,0.726,USA,0.786,California,0.348,0.333,70.4,0.488,0.512,0.031,0.969,4.5
-2,605,0.302,0.278,0.722,USA,0.772,California,0.317,0.36,70.3,0.496,0.504,0.023,0.977,2.07
-3,390,0.195,0.338,0.662,USA,0.785,California,0.333,0.374,40.9,0.503,0.497,0.077,0.923,1.44
