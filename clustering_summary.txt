@@ -1,0 +1,39 @@
+CLUSTERING SUMMARY
+Machine Learning based Buyer Segmentation and Investment Profiling
+============================================================
+
+METHOD: K-Means (k=4), validated against Hierarchical (Ward linkage)
+FEATURES: loan_applied, total_investment, avg_purchase_price, properties_owned, buying_tenure_years, age, satisfaction_score, acquisition_purpose, client_type, gender
+
+EVALUATION (elbow method + silhouette score across k=2-10):
+ k      inertia  silhouette_score
+ 2 15440.860285          0.270997
+ 3 12976.698885          0.256935
+ 4 11054.453224          0.210355
+ 5 10149.619937          0.188703
+ 6  9446.361576          0.195259
+ 7  8842.729392          0.189807
+ 8  8430.740208          0.190980
+ 9  8060.175992          0.188449
+10  7716.678566          0.187192
+
+Final silhouette score at k=4: 0.2104
+
+SEGMENT DEFINITIONS AND ASSIGNMENT RULES:
+  1. Corporate Buyers  - client_type == Company
+     (confirmed by K-Means: forms a pure natural cluster)
+  2. Global Investors  - acquisition_purpose == Investment (remaining)
+     (confirmed by K-Means: forms a pure natural cluster)
+  3. Luxury Investors  - remaining Home-purpose individuals with total_investment >= 75th percentile AND satisfaction_score >= 4
+  4. First-Time Buyers - everyone else (includes an explicit younger+loan-dependent subgroup, plus a residual catch-all - see final_segmentation_rulebased.py for full detail and caveats)
+
+SEGMENT PROFILE SUMMARY:
+  Global Investors: n=579 (28.9%), avg age=55.5, loan rate=38.0%, avg satisfaction=3.02, avg investment=$1,592,667
+  First-Time Buyers: n=1186 (59.3%), avg age=56.1, loan rate=37.9%, avg satisfaction=2.87, avg investment=$415,967
+  Corporate Buyers: n=103 (5.1%), avg age=47.9, loan rate=41.7%, avg satisfaction=3.07, avg investment=$3,207,006
+  Luxury Investors: n=132 (6.6%), avg age=61.9, loan rate=17.4%, avg satisfaction=4.50, avg investment=$716,366
+
+CAVEATS:
+  - total_investment, avg_purchase_price, properties_owned and buying_tenure_years are SYNTHETIC fields (source data has no real financial fields) - see gen_synthetic_financials.py.
+  - First-Time Buyers is a partial catch-all bucket; only a subset genuinely matches 'younger, loan-dependent'.
+  - Geography and raw demographics do not meaningfully differ between segments in this dataset; the financial fields are what actually separate the 4 segments.

@@ -1,0 +1,5 @@
+segment,n_clients,avg_age,avg_satisfaction,loan_applied_rate,avg_total_investment,avg_purchase_price,avg_properties_owned,avg_buying_tenure_years
+Global Investors,579,55.5,3.02,0.38,1592666.84,360024.18,4.4,11.4
+First-Time Buyers,1186,56.09,2.87,0.38,415966.69,293540.47,1.44,11.3
+Corporate Buyers,103,47.87,3.07,0.42,3207005.83,444902.91,7.33,10.09
+Luxury Investors,132,61.88,4.5,0.17,716365.91,354098.48,2.0,12.39
