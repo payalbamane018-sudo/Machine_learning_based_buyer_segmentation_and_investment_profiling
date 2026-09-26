@@ -150,7 +150,3 @@ For Streamlit Community Cloud: point the deploy form's **Main file path** to `ap
 - Prioritize relationship management and exclusive listings for Luxury Investors (highest satisfaction, lowest loan dependency)
 - Target Corporate Buyers with bulk-purchase agreements given their high average portfolio depth (7.33 properties)
 - Revisit the First-Time Buyers segment once real data is available, since only a minority currently matches its intended definition
-
-## Author
-
-[Your name]
